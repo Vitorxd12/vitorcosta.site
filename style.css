@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #bee3db;
+    padding: 15px 30px;
+}
+#links{
+    align-items: center;
+    min-width: 200px;
+    display: flex;
+    justify-content: space-between;
+    color: black;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#nome{
+    font-size: 40px;
+    color: black;
+}
+#botao{
+    font-size: large;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #FAF9F9;
+    border: 2px solid #89B0AE;
+}
+main{
+    margin: 20px;
+    display: flex;
+    border: solid black 1px;   
+}
