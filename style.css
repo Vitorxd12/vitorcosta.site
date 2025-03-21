@@ -7,14 +7,15 @@ body{
     background-color: #121212;
 }
 main{
+    flex-direction: column;
     display: flex;
-    justify-content: center;
+    align-items: center;
     padding-bottom: 30px;
 }
 #accent{
     color: #ac5bfd;
 }
-
+/*HEADER*/
 #header{
     background-color: #090909;
     display: flex;
@@ -51,29 +52,7 @@ main{
 .links:hover{
     opacity: 0.7;
 }
-#maincard{
-    display: flex;  
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: max-content;
-    margin-top: 80px;
-} 
-#boxfoto{
-    height: 350px;
-    width: 400px;
-}
-#boxtexto{
-    color: #dfdfdf;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 350px;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 40px;
-}
-
+/*NAVBAR MENU*/
 #hamburguer {
     font-size: 30px;
     color: #dfdfdf;
@@ -107,4 +86,37 @@ main{
     #hamburguer {
         display: block;
     }
+}
+/*MAIN CARD*/
+#maincard{
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin-top: 80px;
+} 
+#boxfoto{
+    height: 300px;
+    width: 350px;
+}
+#boxtexto{
+    color: #dfdfdf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+}
+/*ABOUT ME*/
+#aboutme {
+    background-color: #202020;
+    border-radius: 20px;
+    max-width: 1000px;
+    box-shadow: 0px 2px 9px black;
+    margin-top: 50px;
+    padding: 20px;
+    color: #dfdfdf;
 }
