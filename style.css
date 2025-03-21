@@ -4,38 +4,36 @@
     font-family: Arial, sans-serif;
 }
 body{
-    background-color: #252525;
+    background-color: #121212;
 }
-
-header {
+#header{
+    background-color: #050505;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
-    padding: 15px 30px;
+    padding: 15px 40px;
 }
-#links{
+#boxlinks{
     align-items: center;
     min-width: 250px;
     display: flex;
     justify-content: space-between;
-    color: black;
 }
-a{
-    text-decoration: none;
+.links{
     color: #dfdfdf;
+    text-decoration: none;
 }
 #nome{
     font-size: 40px;
     color: #dfdfdf;
 }
-#botao{
-    color: #252525;
-    font-size: large;
+#botaoheader{
+    color: #121212;
+    font-size: large; 
     border-radius: 20px;
     padding: 10px;
     background-color: #ac5bfd;
-    border: #ac5bfd solid;
+    border: #ac5bfd solid 2px;
 }
 main{
     display: flex;
@@ -43,24 +41,25 @@ main{
     padding-bottom: 30px;
 }
 #maincard{
-    background-color: #FAF9F9;
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 2px 2px 2px, -2px -2px 5px;
-    margin: 20px;
     display: flex;  
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap-reverse;
     width: max-content;
 } 
 
-#fototexto{
+#cardfoto{
+    background-color: #252525;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 2px 2px 2px, -2px -2px 5px;
+    margin: 20px;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     width: fit-content;
+    
 }
 #boxfoto{
     height: 350px;
@@ -69,11 +68,12 @@ main{
 #boxtexto{
     color: #dfdfdf;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
     width: 400px;
 }
 #boxsocial {
+    justify-content: center;
     gap: 30px;
 }
 .midialogo{
