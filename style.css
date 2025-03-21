@@ -1,17 +1,18 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: sans-serif;
 }
 body{
     background-color: #121212;
 }
-#header{
-    background-color: #050505;
+main{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+#accent{
+    color: #ac5bfd;
 }
 #boxlinks{
     align-items: center;
@@ -22,6 +23,13 @@ body{
 .links{
     color: #dfdfdf;
     text-decoration: none;
+}
+#header{
+    background-color: #050505;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
 }
 #nome{
     font-size: 40px;
@@ -35,32 +43,14 @@ body{
     background-color: #ac5bfd;
     border: #ac5bfd solid 2px;
 }
-main{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 30px;
-}
 #maincard{
     display: flex;  
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap-reverse;
-    width: max-content;
-} 
-
-#cardfoto{
-    background-color: #252525;
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 2px 2px 2px, -2px -2px 5px;
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
-    width: fit-content;
-    
-}
+    width: max-content;
+    margin-top: 80px;
+} 
 #boxfoto{
     height: 350px;
     width: 400px;
@@ -70,12 +60,8 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 400px;
-}
-#boxsocial {
-    justify-content: center;
-    gap: 30px;
-}
-.midialogo{
-    width: 30px;
+    width: 350px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
 }
