@@ -14,16 +14,7 @@ main{
 #accent{
     color: #ac5bfd;
 }
-#boxlinks{
-    align-items: center;
-    min-width: 250px;
-    display: flex;
-    justify-content: space-between;
-}
-.links{
-    color: #dfdfdf;
-    text-decoration: none;
-}
+
 #header{
     background-color: #050505;
     display: flex;
@@ -35,6 +26,16 @@ main{
     font-size: 40px;
     color: #dfdfdf;
 }
+#boxlinks{
+    align-items: center;
+    min-width: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+.links{
+    color: #dfdfdf;
+    text-decoration: none;
+}
 #botaoheader{
     color: #121212;
     font-size: large; 
@@ -42,6 +43,12 @@ main{
     padding: 10px;
     background-color: #ac5bfd;
     border: #ac5bfd solid 2px;
+}
+#botaoheader:hover{
+    opacity: 0.7;
+}
+.links:hover{
+    opacity: 0.7;
 }
 #maincard{
     display: flex;  
