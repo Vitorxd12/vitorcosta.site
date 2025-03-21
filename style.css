@@ -13,7 +13,7 @@ header {
 }
 #links{
     align-items: center;
-    min-width: 200px;
+    min-width: 250px;
     display: flex;
     justify-content: space-between;
     color: black;
@@ -34,7 +34,31 @@ a{
     border: 2px solid #89B0AE;
 }
 main{
-    margin: 20px;
     display: flex;
-    border: solid black 1px;   
+    justify-content: center;
+}
+#maincard{
+    padding: 20px;
+    box-shadow: 2px 2px 2px, -2px -2px 5px;
+    margin: 20px;
+    display: flex;  
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    width: max-content;
+}
+#foto{
+    height:100%;
+    width: 100%;
+}
+#boxfoto{
+    height: 350px;
+    width: 350x;
+}
+#boxtexto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 400px;
+    width: 400px;
 }
