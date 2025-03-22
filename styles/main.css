@@ -60,6 +60,7 @@ main {
     background-color: #552287;
     border: 2px solid #552287;
     transition: opacity 0.3s;
+    cursor: pointer;
 }
 
 #botao:hover {

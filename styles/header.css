@@ -23,6 +23,8 @@
 .links {
     color: #dfdfdf;
     text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.4s;
 }
 
 #botaoheader {
@@ -32,6 +34,8 @@
     padding: 10px;
     background-color: #ac5bfd;
     border: #ac5bfd solid 2px;
+    transition: opacity 0.4s;
+    cursor: pointer;
 }
 
 /* NAVBAR MENU */
