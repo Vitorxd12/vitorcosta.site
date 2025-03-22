@@ -1,0 +1,68 @@
+/* HEADER */
+#header {
+    background-color: #090909;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vh 40px;
+    box-shadow: 0px 2px 9px;
+}
+
+#nome {
+    font-size: 40px;
+    color: #dfdfdf;
+}
+
+#boxlinks {
+    align-items: center;
+    min-width: 250px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links {
+    color: #dfdfdf;
+    text-decoration: none;
+}
+
+#botaoheader {
+    color: #121212;
+    font-size: large; 
+    border-radius: 20px;
+    padding: 10px;
+    background-color: #ac5bfd;
+    border: #ac5bfd solid 2px;
+}
+
+/* NAVBAR MENU */
+#hamburguer {
+    font-size: 30px;
+    color: #dfdfdf;
+    cursor: pointer;
+    display: none;
+}
+
+#mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    background-color: #090909;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 9px rgb(48, 48, 48);
+}
+
+#mobile-menu a,
+#mobile-menu button {
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Interações */
+#botaoheader:hover,
+#botao:hover,
+.links:hover {
+    opacity: 0.7;
+}

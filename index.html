@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vitor Costa</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/favicon.png" type="png">
     <script src="script.js"></script>
 
 </head>
@@ -16,11 +17,8 @@
 
         <div id="boxlinks">
             <a class="links" href="img/Currículo- Vitor Oliveira Costa Dias.pdf" download>Currículo</a>
-            <a class="links" href="">Sobre</a>
-            <button id="botaoheader">
-                Contato
-                <input class="links" type="button" onClick="document.getElementById('aboutme').scrollIntoView();" />
-            </button>
+            <a class="links" onclick="scrollToAbout()">Sobre</a>
+            <button id="botaoheader" onclick="scrollToContact()">Contato</button>
         </div>
 
 
@@ -30,8 +28,8 @@
 
         <div id="mobile-menu">
             <a class="links" href="img/Currículo- Vitor Oliveira Costa Dias.pdf" download>Currículo</a>
-            <a class="links" href="">Sobre</a>
-            <button id="botaoheader">Contato</button>
+            <a class="links" onclick="scrollToAbout()">Sobre</a>
+            <button id="botaoheader" onclick="scrollToContact()">Contato</button>
         </div>
     </header>
 
@@ -70,7 +68,11 @@
         <h1 id="footercontato">Contato</h1>
         <div id="footermensagem">
             <p>pronto para ajudar em seus projetos. </p>
-            <p>Vitorxd12.12@gmail.com</p>
+            <div id="clicabletext">
+                <a id="clicablemail" href="#" onclick="copyMailToClipboard()"><u>Vitorxd12.12@gmail.com</u></a>
+                <pre>  •  </pre>
+                <a id="clicablenumb" href="#"onclick="copyNumbToClipboard()"><u>+55 (79) 99888-6868</u></a>
+            </div>
         </div>
         <div id="boxsocial">
             <a href="https://www.instagram.com/vitorxd12_" target="_blank">

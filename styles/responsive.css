@@ -1,0 +1,22 @@
+/* RESPONSIVE DESIGN */
+@media (max-width: 700px) {
+    #boxlinks {
+        display: none;
+    }
+
+    #hamburguer {
+        display: block;
+    }
+
+    #aboutmeparagraph {
+        padding: 13px;
+    }
+
+    #aboutme {
+        margin: 25px;
+    }
+
+    #maincard {
+        margin-top: 25px;
+    }
+}
