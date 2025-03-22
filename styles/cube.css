@@ -2,7 +2,6 @@
     --face-size: 20px;
     /* Change this to resize the cube */
 }
-
 .scene {
     display: flex;
     justify-content: center;
@@ -62,4 +61,11 @@
     to {
         transform: rotateX(360deg) rotateY(360deg);
     }
+}
+.footerscene .face {
+    position: absolute;
+    width: var(--face-size);
+    height: var(--face-size);
+    border: 1px solid #ffffff;
+    background: transparent;
 }
