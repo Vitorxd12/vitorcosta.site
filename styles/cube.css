@@ -1,0 +1,65 @@
+:root {
+    --face-size: 20px;
+    /* Change this to resize the cube */
+}
+
+.scene {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(var(--face-size) * 2);
+    height: calc(var(--face-size) * 2);
+    perspective: 1000px;
+}
+
+.cube {
+    width: var(--face-size);
+    height: var(--face-size);
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotateCube 5s infinite linear;
+}
+
+.face {
+    position: absolute;
+    width: var(--face-size);
+    height: var(--face-size);
+    border: 1px solid #ac5bfd;
+    background: transparent;
+}
+
+/* Positioning the faces dynamically */
+.front {
+    transform: translateZ(calc(var(--face-size) / 2));
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(calc(var(--face-size) / 2));
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(calc(var(--face-size) / 2));
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(calc(var(--face-size) / 2));
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(calc(var(--face-size) / 2));
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(calc(var(--face-size) / 2));
+}
+
+/* Rotation animation */
+@keyframes rotateCube {
+    from {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+
+    to {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}

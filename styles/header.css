@@ -12,6 +12,12 @@
     font-size: 40px;
     color: #dfdfdf;
 }
+#logo{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+}
 
 #boxlinks {
     align-items: center;

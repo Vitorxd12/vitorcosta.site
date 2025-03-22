@@ -2,6 +2,7 @@
 @import url('styles/main.css');
 @import url('styles/footer.css');
 @import url('styles/responsive.css');
+@import url('styles/cube.css');
 
 * {
     margin: 0;
