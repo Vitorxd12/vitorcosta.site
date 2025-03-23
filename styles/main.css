@@ -7,7 +7,7 @@ main {
 }
 
 /* MAIN CARD */
-#maincard {
+#main-card {
     display: flex;  
     align-items: center;
     justify-content: center;
@@ -16,12 +16,16 @@ main {
     margin-top: 80px;
 } 
 
-#boxfoto {
+#main-image-box {
     height: 300px;
     width: 350px;
 }
+#main-image{
+    height: 100%; 
+    width:100%;
+}
 
-#boxtexto {
+#main-title-box {
     color: #dfdfdf;
     display: flex;
     align-items: center;
@@ -38,7 +42,7 @@ main {
 }
 
 /* ABOUT ME */
-#aboutme {
+#about-me-card {
     display: flex;
     flex-direction: column;
     background-color: #202020;
@@ -49,10 +53,10 @@ main {
     color: #dfdfdf;
 }
 
-#aboutmeparagraph {
+#about-me-text {
     padding: 40px;
 }
-#botao {
+#about-me-button {
     width: 100%;
     color: white;
     font-size: large;
@@ -64,6 +68,6 @@ main {
     cursor: pointer;
 }
 
-#botao:hover {
+#about-me-button:hover {
     opacity: 0.7;
 }

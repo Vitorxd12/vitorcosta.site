@@ -8,15 +8,15 @@
         display: block;
     }
 
-    #aboutmeparagraph {
+    #about-me-text {
         padding: 13px;
     }
 
-    #aboutme {
+    #about-me-card {
         margin: 25px;
     }
 
-    #maincard {
+    #main-card {
         margin-top: 25px;
     }
     #contact-text-box{
@@ -33,11 +33,14 @@
       }
 }
 @media (max-width: 400px){
-    #boxtexto{
+    #main-title-box{
         width: 200px;
     }
-    #boxfoto{
+    .main-title{
+        font-size: x-large;
+    }
+    #main-image-box{
         width: 250px;
-        height: 250px;
+        height: 225px;
     }
 }
