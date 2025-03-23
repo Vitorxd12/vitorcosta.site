@@ -38,12 +38,14 @@ footer {
     align-items: center;
     color: #dfdfdf;
 }
-#clicabletext{
+#contact-text-box{
     padding-top: 15px;
     color: #dfdfdf;
     display: flex;
     gap: 30px;
-    padding-right: 27px;
+    padding-right: 27
+    
+    px;
 }
 #end {
     padding: 10px;

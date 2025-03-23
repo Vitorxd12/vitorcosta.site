@@ -1,6 +1,6 @@
 /* RESPONSIVE DESIGN */
 @media (max-width: 600px) {
-    #boxlinks {
+    #navbar-box {
         display: none;
     }
 
@@ -19,16 +19,16 @@
     #maincard {
         margin-top: 25px;
     }
-    #clicabletext{
+    #contact-text-box{
         flex-direction: column;
         align-items: center;
         padding: 0;
         gap: 10px;
     }
-    .footerscene{
+    .footer-cube-scene{
         padding-top: 10px;
     }
-    .footerscene:nth-child(2) {
+    .footer-cube-scene:nth-child(2) {
         order: -1; /* Moves second item to first position */
       }
 }
