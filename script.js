@@ -7,13 +7,13 @@ function toggleMenu() {
         menu.style.display = "flex";
     }
 }
-function scrollToContact(){
+function scrollToContact() {
     document.getElementById('footercontato').scrollIntoView({
-            behavior: "smooth",
-            block: "start" 
-        });
+        behavior: "smooth",
+        block: "start"
+    });
 }
-function scrollToAbout(){
+function scrollToAbout() {
     document.getElementById('aboutme').scrollIntoView({
         behavior: "smooth",
         block: "start"

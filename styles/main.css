@@ -36,11 +36,6 @@ main {
     padding-bottom: 40px;
 }
 
-#accent {
-    color: #ac5bfd;
-    font-family: inherit;
-}
-
 /* ABOUT ME */
 #about-me-card {
     display: flex;

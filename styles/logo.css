@@ -1,6 +1,20 @@
+#nome {
+    font-size: 40px;
+    color: #dfdfdf;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+}
+#accent {
+    color: #ac5bfd;
+    font-family: inherit;
+}
 :root {
+    /* CUBE SIZE */
     --face-size: 20px;
-    /* Change this to resize the cube */
 }
 .cube-scene {
     display: flex;
@@ -27,7 +41,6 @@
     background: transparent;
 }
 
-/* Positioning the faces dynamically */
 .front {
     transform: translateZ(calc(var(--face-size) / 2));
 }
@@ -62,7 +75,7 @@
         transform: rotateX(360deg) rotateY(360deg);
     }
 }
-.footer-cube-scene .face {
+.white-cube-scene .face {
     position: absolute;
     width: var(--face-size);
     height: var(--face-size);

@@ -8,17 +8,6 @@
     box-shadow: 0px 2px 9px;
 }
 
-#nome {
-    font-size: 40px;
-    color: #dfdfdf;
-}
-.logo{
-    display: flex;
-    align-items: center;
-    gap: 25px;
-
-}
-
 #navbar-box {
     align-items: center;
     min-width: 250px;
