@@ -45,12 +45,12 @@ header {
     margin-top: 30px;
     border-radius: 5px;
     background-color: gray;
-
 }
 #card-header{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    position: relative;
 }
 button{
     background-color: #ac5bfd;
@@ -64,5 +64,24 @@ button{
 .img{
     width: 100%;
 
+    border-radius: 10px;
+}
+#periodo-menu, #dia-menu{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    left: 30%;
+    background-color: #090909;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 9px rgb(48, 48, 48);
+}
+#dia-menu{
+    left: 67%;
+}
+.menu-item{
+    color: white;
+    background-color: #161616;
     border-radius: 5px;
 }
