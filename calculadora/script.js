@@ -1,4 +1,4 @@
-let expressao = "";  
+let expressao = "";
 
 function formatExpression(exp) {
     return exp
@@ -8,6 +8,7 @@ function formatExpression(exp) {
         .replace(/Math\.cos\(/g, "cos(")
         .replace(/Math\.tan\(/g, "tg(")
         .replace(/Math\.PI/g, "π")
+        .replace(/Math\.E/g, "e")
         .replace(/\*\*/g, "^");
 }
 
@@ -41,7 +42,7 @@ function oPress(botao) {
         try {
             let resultado = eval(expressao);
             display.innerHTML = resultado;
-            expressao = resultado.toString(); 
+            expressao = resultado.toString();
         } catch (e) {
             display.innerHTML = "Erro";
             expressao = "";
@@ -55,6 +56,8 @@ function oPress(botao) {
             { regex: /Math\.sin\($/, length: 9 },
             { regex: /Math\.cos\($/, length: 9 },
             { regex: /Math\.tan\($/, length: 9 },
+            { regex: /Math\.PI$/, length: 7 },
+            { regex: /Math\.E$/, length: 6 },
         ];
         let removed = false;
         for (const fn of functionPatterns) {
@@ -82,12 +85,12 @@ function oPress(botao) {
     }
 }
 
-document.addEventListener('keydown', function(event) {
+document.addEventListener('keydown', function (event) {
     const keyMap = {
-        'Enter': '=',    
+        'Enter': '=',
         'Backspace': '<',
-        'Delete': 'c',   
-        '^': '**',       
+        'Delete': 'c',
+        '^': '**',
     };
 
     let key = event.key;
@@ -114,8 +117,3 @@ document.addEventListener('keydown', function(event) {
     if (key === 'p') { bPress('Math.PI'); event.preventDefault(); }
     if (key === 'e') { bPress('Math.E'); event.preventDefault(); }
 });
-function preprocessExpression(exp) {
-    return exp
-        .replace(/(\d|\))(?=\()/g, '$1*')
-        .replace(/(\d|\))(?=Math\.)/g, '$1*');
-}
