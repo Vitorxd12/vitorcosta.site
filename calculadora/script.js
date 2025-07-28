@@ -1,101 +1,121 @@
-let memoria = 0;
-let operadorAnterior = "";
-let novaEntrada = true; // controla se deve começar número novo após operador ou resultado
+let expressao = "";  
+
+function formatExpression(exp) {
+    return exp
+        .replace(/Math\.log\(/g, "log(")
+        .replace(/Math\.sqrt\(/g, "√(")
+        .replace(/Math\.sin\(/g, "sin(")
+        .replace(/Math\.cos\(/g, "cos(")
+        .replace(/Math\.tan\(/g, "tg(")
+        .replace(/Math\.PI/g, "π")
+        .replace(/\*\*/g, "^");
+}
 
 function bPress(botao) {
-    const display = document.getElementById("display");
-    console.log("m=", memoria, "opAnt=", operadorAnterior, "bpress", botao);
-
-    // Se for número ou ponto
-    if (/^\d$/.test(botao) || botao === ".") {
-        if (novaEntrada) {
-            display.innerHTML = (botao === "." ? "0." : botao);
-            novaEntrada = false;
-        } else {
-            if (botao === "." && display.innerHTML.includes(".")) return; // evita múltiplos pontos
-            display.innerHTML += botao;
-        }
-        return;
-    }
-
-    switch (botao) {
-        case "+":
-        case "-":
-        case "*":
-        case "/":
-            if (operadorAnterior === "") {
-                memoria = parseFloat(display.innerHTML);
-            } else {
-                realizarCalculo(memoria, operadorAnterior, parseFloat(display.innerHTML));
-                memoria = parseFloat(display.innerHTML);
-            }
-            operadorAnterior = botao;
-            novaEntrada = true;
-            break;
-
-        case "=":
-            if (operadorAnterior !== "") {
-                realizarCalculo(memoria, operadorAnterior, parseFloat(display.innerHTML));
-                operadorAnterior = "";
-                novaEntrada = true;
-            }
-            break;
-
-        case "c":
-            memoria = 0;
-            operadorAnterior = "";
-            display.innerHTML = "0";
-            novaEntrada = true;
-            break;
-
-        case "<":
-            if (!novaEntrada) {
-                if (display.innerHTML.length > 1) {
-                    display.innerHTML = display.innerHTML.slice(0, -1);
-                } else {
-                    display.innerHTML = "0";
-                }
-            }
-            break;
-
-        default:
-            display.innerHTML = "Erro";
-            novaEntrada = true;
-            break;
+    const regexNumero = /^-?\d+(\.\d+)?$/;
+    if (regexNumero.test(botao) || botao === '.') {
+        displayBuild(botao);
+    } else {
+        oPress(botao);
     }
 }
 
-function realizarCalculo(num_1, op, num_2) {
-    const display = document.getElementById("display");
-    console.log("realizarCalculo", num_1, op, num_2);
-    let resultado;
+function displayBuild(botao) {
+    let display = document.getElementById('display');
+    if (display.innerHTML === "0") {
+        expressao = botao;
+    } else {
+        expressao += botao;
+    }
+    display.innerHTML = formatExpression(expressao);
+}
 
-    switch (op) {
-        case "+":
-            resultado = num_1 + num_2;
-            break;
-        case "-":
-            resultado = num_1 - num_2;
-            break;
-        case "*":
-            resultado = num_1 * num_2;
-            break;
-        case "/":
-            if (num_2 === 0) {
-                display.innerHTML = "Indefinido";
-                memoria = 0;
-                operadorAnterior = "";
-                return;
-            }
-            resultado = num_1 / num_2;
-            break;
-        default:
+function clearDisplay() {
+    document.getElementById('display').innerHTML = "0";
+    expressao = "";
+}
+
+function oPress(botao) {
+    let display = document.getElementById('display');
+    if (botao === "=") {
+        try {
+            let resultado = eval(expressao);
+            display.innerHTML = resultado;
+            expressao = resultado.toString(); 
+        } catch (e) {
             display.innerHTML = "Erro";
-            memoria = 0;
-            operadorAnterior = "";
-            return;
+            expressao = "";
+        }
+    } else if (botao === "c") {
+        clearDisplay();
+    } else if (botao === "<") {
+        const functionPatterns = [
+            { regex: /Math\.sqrt\($/, length: 10 },
+            { regex: /Math\.log\($/, length: 9 },
+            { regex: /Math\.sin\($/, length: 9 },
+            { regex: /Math\.cos\($/, length: 9 },
+            { regex: /Math\.tan\($/, length: 9 },
+        ];
+        let removed = false;
+        for (const fn of functionPatterns) {
+            if (expressao.slice(-fn.length).match(fn.regex)) {
+                expressao = expressao.slice(0, -fn.length);
+                removed = true;
+                break;
+            }
+        }
+        if (!removed) {
+            if (expressao.slice(-2) === "**") {
+                expressao = expressao.slice(0, -2);
+            } else {
+                expressao = expressao.slice(0, -1);
+            }
+        }
+        if (expressao === "") {
+            display.innerHTML = "0";
+        } else {
+            display.innerHTML = formatExpression(expressao);
+        }
+    } else {
+        expressao += botao;
+        display.innerHTML = formatExpression(expressao);
+    }
+}
+
+document.addEventListener('keydown', function(event) {
+    const keyMap = {
+        'Enter': '=',    
+        'Backspace': '<',
+        'Delete': 'c',   
+        '^': '**',       
+    };
+
+    let key = event.key;
+
+    if (keyMap[key]) {
+        bPress(keyMap[key]);
+        event.preventDefault();
+        return;
     }
 
-    display.innerHTML = resultado.toString();
-    memoria = resultado;
+    if (
+        /^[0-9+\-*/().]$/.test(key)
+    ) {
+        bPress(key);
+        event.preventDefault();
+        return;
+    }
+
+    if (key === 'l') { bPress('Math.log('); event.preventDefault(); }
+    if (key === 'c') { bPress('Math.cos('); event.preventDefault(); }
+    if (key === 's') { bPress('Math.sin('); event.preventDefault(); }
+    if (key === 't') { bPress('Math.tan('); event.preventDefault(); }
+    if (key === 'r') { bPress('Math.sqrt('); event.preventDefault(); }
+    if (key === 'p') { bPress('Math.PI'); event.preventDefault(); }
+    if (key === 'e') { bPress('Math.E'); event.preventDefault(); }
+});
+function preprocessExpression(exp) {
+    return exp
+        .replace(/(\d|\))(?=\()/g, '$1*')
+        .replace(/(\d|\))(?=Math\.)/g, '$1*');
 }

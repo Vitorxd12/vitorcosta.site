@@ -33,26 +33,39 @@
   <div class="calculadora">
     <div class="display" id="display">0</div>
     <div class="botoes">
+      <div class="botao operador" onclick="bPress('(')">(</div>
+      <div class="botao operador" onclick="bPress(')')">)</div>
       <div class="botao operador" onclick="bPress('-')">−</div>
       <div class="botao operador" onclick="bPress('/')">÷</div>
       <div class="botao operador" onclick="bPress('*')">×</div>
       <div class="botao operador" onclick="bPress('+')">+</div>
 
+
+
+      <div class="botao funcao" onclick="bPress('**')">exp</div>
+      <div class="botao funcao" onclick="bPress('Math.sqrt(')">√</div>
       <div class="botao numero" onclick="bPress('7')">7</div>
       <div class="botao numero" onclick="bPress('8')">8</div>
       <div class="botao numero" onclick="bPress('9')">9</div>
       <div class="botao funcao" onclick="bPress('c')">C</div>
 
+      <div class="botao funcao" onclick="bPress('Math.log(')">log</div>
+      <div class="botao funcao" onclick="bPress('Math.cos(')">cos</div>
       <div class="botao numero" onclick="bPress('4')">4</div>
       <div class="botao numero" onclick="bPress('5')">5</div>
       <div class="botao numero" onclick="bPress('6')">6</div>
       <div class="botao funcao" onclick="bPress('<')">←</div>
 
+
+      <div class="botao funcao" onclick="bPress('Math.sin(')">sin</div>
+      <div class="botao funcao" onclick="bPress('Math.tan(')">tg</div>
       <div class="botao numero" onclick="bPress('1')">1</div>
       <div class="botao numero" onclick="bPress('2')">2</div>
       <div class="botao numero" onclick="bPress('3')">3</div>
       <div class="botao igual" onclick="bPress('=')">=</div>
 
+      <div class="botao funcao" onclick="bPress('Math.PI')">π</div>
+      <div class="botao funcao" onclick="bPress('Math.E')">e</div>
       <div class="botao numero zero" onclick="bPress('0')">0</div>
       <div class="botao numero" onclick="bPress('.')">.</div>
 

@@ -54,22 +54,21 @@ a {
   border-radius: 12px;
   text-align: right;
   margin-bottom: 20px;
-  height: 60px;
+  height: 65px;
   overflow-x: auto;
-  font-family: 'Segment7', monospace;
 }
 
 .botoes {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
 }
 
 .botao {
   aspect-ratio: 1 / 1;
   font-size: 1.4em;
   border: none;
-  border-radius: 12px;
+  border-radius: 6px;
   color: white;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -151,9 +150,7 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #090909;
     padding-left: 40px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.6);
     z-index: 1000;
   }
 
@@ -165,7 +162,7 @@ a {
     position: relative;
     margin: 0 auto;
     width: calc(100vw - 40px);
-    max-width: 200px;
+    max-width: 400px;
     padding: 20px;
   }
 
@@ -175,5 +172,14 @@ a {
 
   .botao {
     border-radius: 8px;
+  }
+}
+@media (max-width: 400px) {
+  .botao {
+    font-size: 1em;
+    border-radius: 3px;
+  }
+  .botoes {
+    gap: 4px;
   }
 }
