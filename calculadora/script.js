@@ -40,7 +40,8 @@ function oPress(botao) {
     let display = document.getElementById('display');
     if (botao === "=") {
         try {
-            let resultado = eval(expressao);
+            let toEval = preprocessExpression(expressao);
+            let resultado = eval(toEval);
             display.innerHTML = resultado;
             expressao = resultado.toString();
         } catch (e) {
@@ -51,17 +52,17 @@ function oPress(botao) {
         clearDisplay();
     } else if (botao === "<") {
         const functionPatterns = [
-            { regex: /Math\.sqrt\($/, length: 10 },
-            { regex: /Math\.log\($/, length: 9 },
-            { regex: /Math\.sin\($/, length: 9 },
-            { regex: /Math\.cos\($/, length: 9 },
-            { regex: /Math\.tan\($/, length: 9 },
-            { regex: /Math\.PI$/, length: 7 },
-            { regex: /Math\.E$/, length: 6 },
+            { regex: /^Math\.sqrt\($/, length: 10 },
+            { regex: /^Math\.log\($/, length: 9 },
+            { regex: /^Math\.sin\($/, length: 9 },
+            { regex: /^Math\.cos\($/, length: 9 },
+            { regex: /^Math\.tan\($/, length: 9 },
+            { regex: /^Math\.PI$/, length: 7 },
+            { regex: /^Math\.E$/, length: 6 },
         ];
         let removed = false;
         for (const fn of functionPatterns) {
-            if (expressao.slice(-fn.length).match(fn.regex)) {
+            if (fn.regex.test(expressao.slice(-fn.length))) {
                 expressao = expressao.slice(0, -fn.length);
                 removed = true;
                 break;
@@ -117,3 +118,18 @@ document.addEventListener('keydown', function (event) {
     if (key === 'p') { bPress('Math.PI'); event.preventDefault(); }
     if (key === 'e') { bPress('Math.E'); event.preventDefault(); }
 });
+
+function preprocessExpression(exp) {
+    // Corrigir funções trigonométricas para graus
+    exp = exp.replace(/Math\.sin\(([^)]+)\)/g, 'Math.sin(($1)*Math.PI/180)');
+    exp = exp.replace(/Math\.cos\(([^)]+)\)/g, 'Math.cos(($1)*Math.PI/180)');
+    exp = exp.replace(/Math\.tan\(([^)]+)\)/g, 'Math.tan(($1)*Math.PI/180)');
+
+    // Corrigir log para log de base 10
+    exp = exp.replace(/Math\.log\(([^)]+)\)/g, '(Math.log($1)/Math.log(10))');
+
+    // Adicionar multiplicação implícita
+    return exp
+        .replace(/(\d|\))(?=\()/g, '$1*')
+        .replace(/(\d|\))(?=Math\.)/g, '$1*');
+}
