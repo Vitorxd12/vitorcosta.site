@@ -41,6 +41,23 @@ function oPress(botao) {
     if (botao === "=") {
         try {
             let toEval = preprocessExpression(expressao);
+
+            // Auto-balance parentheses before eval
+            let open = (toEval.match(/\(/g) || []).length;
+            let close = (toEval.match(/\)/g) || []).length;
+            if (open > close) {
+                toEval += ')'.repeat(open - close);
+            } else if (close > open) {
+                // Remove extra closing parentheses from the end
+                let diff = close - open;
+                for (let i = 0; i < diff; i++) {
+                    let lastClose = toEval.lastIndexOf(')');
+                    if (lastClose !== -1) {
+                        toEval = toEval.slice(0, lastClose) + toEval.slice(lastClose + 1);
+                    }
+                }
+            }
+
             let resultado = eval(toEval);
             display.innerHTML = resultado;
             expressao = resultado.toString();
@@ -119,7 +136,137 @@ document.addEventListener('keydown', function (event) {
     if (key === 'e') { bPress('Math.E'); event.preventDefault(); }
 });
 
-function preprocessExpression(exp) {
+function preprocessExpression(exp) {function oPress(botao) {
+    let display = document.getElementById('display');
+    if (botao === "=") {
+        try {
+            let toEval = preprocessExpression(expressao);
+
+            // Auto-balance parentheses before eval
+            let open = (toEval.match(/\(/g) || []).length;
+            let close = (toEval.match(/\)/g) || []).length;
+            if (open > close) {
+                toEval += ')'.repeat(open - close);
+            } else if (close > open) {
+                // Remove extra closing parentheses from the end
+                let diff = close - open;
+                for (let i = 0; i < diff; i++) {
+                    let lastClose = toEval.lastIndexOf(')');
+                    if (lastClose !== -1) {
+                        toEval = toEval.slice(0, lastClose) + toEval.slice(lastClose + 1);
+                    }
+                }
+            }
+
+            let resultado = eval(toEval);
+            display.innerHTML = resultado;
+            expressao = resultado.toString();
+        } catch (e) {
+            display.innerHTML = "Erro";
+            expressao = "";
+        }
+    } else if (botao === "c") {
+        clearDisplay();
+    } else if (botao === "<") {
+        const functionPatterns = [
+            { regex: /^Math\.sqrt\($/, length: 10 },
+            { regex: /^Math\.log\($/, length: 9 },
+            { regex: /^Math\.sin\($/, length: 9 },
+            { regex: /^Math\.cos\($/, length: 9 },
+            { regex: /^Math\.tan\($/, length: 9 },
+            { regex: /^Math\.PI$/, length: 7 },
+            { regex: /^Math\.E$/, length: 6 },
+        ];
+        let removed = false;
+        for (const fn of functionPatterns) {
+            if (fn.regex.test(expressao.slice(-fn.length))) {
+                expressao = expressao.slice(0, -fn.length);
+                removed = true;
+                break;
+            }
+        }
+        if (!removed) {
+            if (expressao.slice(-2) === "**") {
+                expressao = expressao.slice(0, -2);
+            } else {
+                expressao = expressao.slice(0, -1);
+            }
+        }
+        if (expressao === "") {
+            display.innerHTML = "0";
+        } else {
+            display.innerHTML = formatExpression(expressao);
+        }
+    } else {
+        expressao += botao;
+        display.innerHTML = formatExpression(expressao);
+    }
+}function oPress(botao) {
+    let display = document.getElementById('display');
+    if (botao === "=") {
+        try {
+            let toEval = preprocessExpression(expressao);
+
+            // Auto-balance parentheses before eval
+            let open = (toEval.match(/\(/g) || []).length;
+            let close = (toEval.match(/\)/g) || []).length;
+            if (open > close) {
+                toEval += ')'.repeat(open - close);
+            } else if (close > open) {
+                // Remove extra closing parentheses from the end
+                let diff = close - open;
+                for (let i = 0; i < diff; i++) {
+                    let lastClose = toEval.lastIndexOf(')');
+                    if (lastClose !== -1) {
+                        toEval = toEval.slice(0, lastClose) + toEval.slice(lastClose + 1);
+                    }
+                }
+            }
+
+            let resultado = eval(toEval);
+            display.innerHTML = resultado;
+            expressao = resultado.toString();
+        } catch (e) {
+            display.innerHTML = "Erro";
+            expressao = "";
+        }
+    } else if (botao === "c") {
+        clearDisplay();
+    } else if (botao === "<") {
+        const functionPatterns = [
+            { regex: /^Math\.sqrt\($/, length: 10 },
+            { regex: /^Math\.log\($/, length: 9 },
+            { regex: /^Math\.sin\($/, length: 9 },
+            { regex: /^Math\.cos\($/, length: 9 },
+            { regex: /^Math\.tan\($/, length: 9 },
+            { regex: /^Math\.PI$/, length: 7 },
+            { regex: /^Math\.E$/, length: 6 },
+        ];
+        let removed = false;
+        for (const fn of functionPatterns) {
+            if (fn.regex.test(expressao.slice(-fn.length))) {
+                expressao = expressao.slice(0, -fn.length);
+                removed = true;
+                break;
+            }
+        }
+        if (!removed) {
+            if (expressao.slice(-2) === "**") {
+                expressao = expressao.slice(0, -2);
+            } else {
+                expressao = expressao.slice(0, -1);
+            }
+        }
+        if (expressao === "") {
+            display.innerHTML = "0";
+        } else {
+            display.innerHTML = formatExpression(expressao);
+        }
+    } else {
+        expressao += botao;
+        display.innerHTML = formatExpression(expressao);
+    }
+}
     // Corrigir funções trigonométricas para graus
     exp = exp.replace(/Math\.sin\(([^)]+)\)/g, 'Math.sin(($1)*Math.PI/180)');
     exp = exp.replace(/Math\.cos\(([^)]+)\)/g, 'Math.cos(($1)*Math.PI/180)');
