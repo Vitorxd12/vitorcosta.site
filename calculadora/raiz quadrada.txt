@@ -1,0 +1,17 @@
+raiz quadrada
+método de newton raphson
+algoritimo para resolver equações do tipo f(x) = 0
+transforma a raiz em função
+sqrt(s) 
+x² = s
+ou seja
+f(x) = x² - s = 0
+usar newton pra reolver isso
+
+formula geral
+
+xn-1 = xn - f(xn)/f´(xn)
+
+próximo chute é igual ao chute atual - função/derivada
+
+reiterar até achar um chute próximo o suficiente
