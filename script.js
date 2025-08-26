@@ -8,13 +8,13 @@ function toggleMenu() {
     }
 }
 function scrollToContact() {
-    document.getElementById('footercontato').scrollIntoView({
+    document.getElementById('contact-title').scrollIntoView({
         behavior: "smooth",
         block: "start"
     });
 }
 function scrollToAbout() {
-    document.getElementById('aboutme').scrollIntoView({
+    document.getElementById('about-me-card').scrollIntoView({
         behavior: "smooth",
         block: "start"
     });
