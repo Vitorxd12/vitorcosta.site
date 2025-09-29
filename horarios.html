@@ -4,108 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grade Horária – BSI</title>
-    <style>
-        /* ===== Tema escuro geral ===== */
-        body {
-            background-color: #1e1e1e;
-            color: #f0f0f0;
-            font-family: Arial, sans-serif;
-            padding: 20px;
-        }
-        h2 { text-align: center; }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            border: 1px solid #333;
-            padding: 15px;
-            text-align: center;
-            vertical-align: top;
-            position: relative; /* necessário para posicionar o rótulo */
-        }
-        th {
-            background-color: #2b2b2b;
-            color: #ffffff;
-        }
-        td {
-            background-color: #252526;
-        }
-        .materia {
-            font-weight: bold;
-            font-size: 1rem;
-            color: #4ea1f3;
-            margin-bottom: 5px;
-        }
-        .professor {
-            font-size: 0.9rem;
-            color: #c8c8c8;
-            margin-bottom: 3px;
-        }
-        .local {
-            font-size: 0.85rem;
-            color: #9cdcfe;
-        }
-        .empty {
-            color: #555;
-            font-style: italic;
-        }
-
-        /* ===== Responsividade ===== */
-        @media (max-width: 768px) {
-            table, thead, tbody, th, td, tr {
-                display: block;
-            }
-
-            thead {
-                display: none; /* esconde o cabeçalho em mobile */
-            }
-
-            tr {
-                margin-bottom: 1.5rem;
-                background-color: #2b2b2b;
-                border-radius: 8px;
-                overflow: hidden;
-            }
-
-            th {
-                text-align: left;
-                padding: 10px 15px;
-                background-color: #333;
-            }
-
-            td {
-                border: none;
-                padding: 10px 15px 10px 35px; /* espaço à esquerda para a sigla */
-                text-align: left;
-                background-color: #252526;
-                border-top: 1px solid #333;
-            }
-
-            /* Título do turno antes dos cartões */
-            tr:before {
-                content: attr(data-turno);
-                display: block;
-                font-weight: bold;
-                font-size: 1.1rem;
-                padding: 8px 15px;
-                background-color: #1e1e1e;
-                color: #4ea1f3;
-            }
-
-            /* Sigla do dia pequena no canto esquerdo */
-            td::before {
-                content: attr(data-dia);
-                position: absolute;
-                left: 10px;
-                top: 10px;
-                font-size: 0.7rem;
-                color: #aaa;
-                font-weight: bold;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles/horarios.css">
 </head>
 <body>
 <h2>Grade Horária – BSI</h2>
@@ -122,7 +21,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr data-turno="Vespertino">
+    <tr>
         <th>Vespertino</th>
         <td data-dia="Seg">
             <div class="materia">Algoritmos e Estrut. de Dados I</div>
@@ -144,12 +43,12 @@
         </td>
         <td class="empty" data-dia="Sex">–</td>
     </tr>
-    <tr data-turno="Noturno">
+    <tr>
         <th>Noturno</th>
         <td data-dia="Seg">
             <div class="materia">Redes de Computadores</div>
             <div class="professor">Prof. Gustavo da Silva Quirino</div>
-            <div class="local">Sala 10 Bloco III</div>
+            <div class="local">Lab Inf. 05</div>
         </td>
         <td data-dia="Ter">
             <div class="materia">Sistemas Operacionais</div>
