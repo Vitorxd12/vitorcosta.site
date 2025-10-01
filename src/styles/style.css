@@ -10,8 +10,11 @@
     padding: 0;
     font-family: sans-serif;
 }
+:root {
+    background-color: var(--cor-header);
+}
 body {
-    background-color: var(--cor-background);
+    background: var(--cor-background);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }

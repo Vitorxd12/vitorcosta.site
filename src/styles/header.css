@@ -33,7 +33,7 @@
 }
 
 .navbar-button.highlight {
-    color: var(--cor-background);
+    color: var(--cor-texto);
     background-color: var(--cor-roxo-claro);
     border: var(--cor-roxo-claro) solid 2px;
     margin-left: 20px;

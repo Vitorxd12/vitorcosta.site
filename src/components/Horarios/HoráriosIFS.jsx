@@ -1,7 +1,15 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import styles from './horarios-ifs.module.css';
 
 function HorariosIFS() {
+    useEffect(() => {
+        document.title = "Horários | IFS | Sist. Inf.";
+        const favicon = document.querySelector("link[rel='icon']");
+        const href = `/ifs.png`;
+        if (favicon) {
+            favicon.href = href;
+        }
+    }, []);
     return (
         <div className={styles.container}>
             <h2 className={styles.titulo}>Grade Horária – BSI</h2>

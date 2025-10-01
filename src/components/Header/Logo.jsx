@@ -1,14 +1,15 @@
 import CubeScene from "../CubeScene";
+import { Link } from "react-router-dom";
 
 
 function Logo() {
     return (
-        <div className="logo">
+        <Link to={"/"} className="logo" >
             <h1 id="nome">
                 <span id="accent">.</span>vitor
             </h1>
             <CubeScene/>
-        </div>
+        </Link>
     );
 }
 

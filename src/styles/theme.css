@@ -3,9 +3,9 @@
     --cor-roxo-claro: #ac5bfd;
     --cor-texto: #dfdfdf;
     --cor-header: #090909;
-    --cor-background: #121212;
+    --cor-background: linear-gradient(135deg, #121212, #28184a);
     --cor-layer2: #202020;
-    --cor-layer1: #454545;
+    --cor-layer1: #251c3c;
     #theme-icon{
         filter: invert(.9);
     }
@@ -15,20 +15,20 @@
     --cor-roxo-claro:  #9c4dcc;   /* tom médio para botões/links */
     --cor-texto:       #212121;   /* texto escuro confortável */
     --cor-header: #b39ddb;   /* lilás claro no header */
-    --cor-background:  #ede7f6;   /* fundo lilás suave, mais "colorido" */
-    --cor-layer2:      #d1c4e9;   /* cards/caixas (médio) */
-    --cor-layer1:      #b39ddb;   /* divisores/bordas (mais forte) */
+    --cor-background:  linear-gradient(135deg, #f5f5ff, #c6b6f8);   /* fundo lilás suave, mais "colorido" */
+    --cor-layer2: #e9ddff;   /* cards/caixas (médio) */
+    --cor-layer1: #cebbf3;   /* divisores/bordas (mais forte) */
     #contact-title {
-        color: var(--cor-background);
+        color: var(--cor-layer2);
     }
     #contact-message {
-        color: var(--cor-background);
+        color: var(--cor-layer2);
     }
     #contact-text-box {
-        color: var(--cor-background);
+        color: var(--cor-layer2);
     }
     #about-me-button{
-        color: var(--cor-background);
+        color: var(--cor-layer2);
     }
     #header {
         box-shadow: 0px 2px 9px var(--cor-layer1);
