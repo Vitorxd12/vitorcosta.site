@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.03840d4c.css",
-    "main.js": "/static/js/main.1983497d.js",
+    "main.js": "/static/js/main.33af1001.js",
     "static/js/453.1d07bb3b.chunk.js": "/static/js/453.1d07bb3b.chunk.js",
     "static/media/self.png": "/static/media/self.3623e447b49859c6dee3.png",
     "static/media/Currículo- Vitor Oliveira Costa Dias.pdf": "/static/media/Currículo- Vitor Oliveira Costa Dias.1dd2f63a01b5a7821114.pdf",
@@ -10,11 +10,11 @@
     "static/media/whatsapp.png": "/static/media/whatsapp.f90a760bd3bb32b619c2.png",
     "index.html": "/index.html",
     "main.03840d4c.css.map": "/static/css/main.03840d4c.css.map",
-    "main.1983497d.js.map": "/static/js/main.1983497d.js.map",
+    "main.33af1001.js.map": "/static/js/main.33af1001.js.map",
     "453.1d07bb3b.chunk.js.map": "/static/js/453.1d07bb3b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.03840d4c.css",
-    "static/js/main.1983497d.js"
+    "static/js/main.33af1001.js"
   ]
 }
