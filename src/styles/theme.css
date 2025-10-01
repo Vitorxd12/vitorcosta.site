@@ -1,0 +1,43 @@
+:root{
+    --cor-roxo-escuro: #552287;
+    --cor-roxo-claro: #ac5bfd;
+    --cor-texto: #dfdfdf;
+    --cor-header: #090909;
+    --cor-background: #121212;
+    --cor-layer2: #202020;
+    --cor-layer1: #454545;
+    #theme-icon{
+        filter: invert(.9);
+    }
+}
+.lightmode {
+    --cor-roxo-escuro: #9c4dcc;   /* roxo forte para títulos/destaques */
+    --cor-roxo-claro:  #9c4dcc;   /* tom médio para botões/links */
+    --cor-texto:       #212121;   /* texto escuro confortável */
+    --cor-header: #b39ddb;   /* lilás claro no header */
+    --cor-background:  #ede7f6;   /* fundo lilás suave, mais "colorido" */
+    --cor-layer2:      #d1c4e9;   /* cards/caixas (médio) */
+    --cor-layer1:      #b39ddb;   /* divisores/bordas (mais forte) */
+    #contact-title {
+        color: var(--cor-background);
+    }
+    #contact-message {
+        color: var(--cor-background);
+    }
+    #contact-text-box {
+        color: var(--cor-background);
+    }
+    #about-me-button{
+        color: var(--cor-background);
+    }
+    #header {
+        box-shadow: 0px 2px 9px var(--cor-layer1);
+    }
+    #navbar-mobile {
+        box-shadow: 0px 2px 9px var(--cor-layer1);
+    }
+    #theme-icon{
+        filter: invert(0);
+    }
+}
+

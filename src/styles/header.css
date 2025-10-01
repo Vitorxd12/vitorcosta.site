@@ -1,6 +1,6 @@
 /* HEADER */
 #header {
-    background-color: #090909;
+    background-color: var(--cor-header);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -8,60 +8,57 @@
     box-shadow: 0px 2px 9px;
 }
 
-#navbar-box {
+#navbar {
     align-items: center;
     min-width: 250px;
     display: flex;
     justify-content: space-between;
+    height: 30px;
+}
+#theme-icon{
+    height: 30px;
+    width: 30px;
 }
 
-.navbar-links {
-    color: #dfdfdf;
+.navbar-button {
     text-decoration: none;
-    cursor: pointer;
-    transition: opacity 0.4s;
-}
-
-#navbar-button {
-    color: #121212;
-    font-size: large; 
+    color: var(--cor-texto);
+    font-size: large;
     border-radius: 20px;
     padding: 10px;
-    background-color: #ac5bfd;
-    border: #ac5bfd solid 2px;
+    background-color: transparent;
+    border: none;
     transition: opacity 0.4s;
     cursor: pointer;
+}
+
+.navbar-button.highlight {
+    color: var(--cor-background);
+    background-color: var(--cor-roxo-claro);
+    border: var(--cor-roxo-claro) solid 2px;
+    margin-left: 20px;
 }
 
 /* NAVBAR MENU */
 #hamburguer {
     font-size: 30px;
-    color: #dfdfdf;
+    color: var(--cor-texto);
     cursor: pointer;
     display: none;
 }
 
-#mobile-menu {
-    display: none;
+#navbar-mobile {
     flex-direction: column;
     position: absolute;
     top: 100px;
     right: 20px;
-    background-color: #090909;
+    background-color: var(--cor-header);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 2px 9px rgb(48, 48, 48);
-}
-
-#mobile-menu a,
-#mobile-menu button {
-    margin: 10px 0;
-    text-align: center;
+    box-shadow: 0px 2px 9px;
 }
 
 /* Interações */
-#navbar-button:hover,
-#about-me-button:hover,
-.navbar-links:hover {
+.navbar-button:hover {
     opacity: 0.7;
 }

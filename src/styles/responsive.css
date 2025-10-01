@@ -1,4 +1,4 @@
-/* RESPONSIVE DESIGN */
+
 @media (max-width: 600px) {
     #navbar-box {
         display: none;
@@ -24,6 +24,7 @@
         align-items: center;
         padding: 0;
         gap: 10px;
+        margin-right: 0;
     }
     .footer-cube-scene{
         padding-top: 10px;

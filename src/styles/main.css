@@ -21,12 +21,12 @@ main {
     width: 350px;
 }
 #main-image{
-    height: 100%; 
+    height: 100%;
     width:100%;
 }
 
 #main-title-box {
-    color: #dfdfdf;
+    color:var(--cor-texto);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -40,25 +40,26 @@ main {
 #about-me-card {
     display: flex;
     flex-direction: column;
-    background-color: #202020;
+    background-color: var(--cor-layer2);
     border-radius: 20px;
     max-width: 1000px;
     margin: 50px;
     padding: 20px;
-    color: #dfdfdf;
+    color: var(--cor-texto);
 }
 
 #about-me-text {
     padding: 40px;
 }
+
 #about-me-button {
     width: 100%;
-    color: white;
+    color: var(--cor-texto);
     font-size: large;
     border-radius: 20px;
     padding: 10px 20px;
-    background-color: #552287;
-    border: 2px solid #552287;
+    background-color: var(--cor-roxo-escuro);
+    border: 2px solid  var(--cor-roxo-escuro);
     transition: opacity 0.3s;
     cursor: pointer;
 }

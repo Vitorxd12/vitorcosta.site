@@ -1,15 +1,16 @@
 #nome {
     font-size: 40px;
-    color: #dfdfdf;
+    color:  var(--cor-texto);
 }
 .logo{
     display: flex;
     align-items: center;
     gap: 25px;
 
+
 }
 #accent {
-    color: #ac5bfd;
+    color:     var(--cor-roxo-claro);;
     font-family: inherit;
 }
 :root {
@@ -37,7 +38,7 @@
     position: absolute;
     width: var(--face-size);
     height: var(--face-size);
-    border: 1px solid #ac5bfd;
+    border: 1px solid var(--cor-roxo-claro);;
     background: transparent;
 }
 
@@ -75,10 +76,4 @@
         transform: rotateX(360deg) rotateY(360deg);
     }
 }
-.white-cube-scene .face {
-    position: absolute;
-    width: var(--face-size);
-    height: var(--face-size);
-    border: 1px solid #ffffff;
-    background: transparent;
-}
+

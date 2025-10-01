@@ -1,9 +1,9 @@
 /* FOOTER */
-footer {
+#footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #552287;
+    background-color: var(--cor-roxo-escuro);
     width: 100%;
     height: fit-content;
 }
@@ -12,7 +12,7 @@ footer {
     text-align: center;
     padding: 40px;
     padding-bottom: 5px;
-    color: #dfdfdf;
+    color: var(--cor-texto);
 }
 
 #social-midia-box {
@@ -36,20 +36,21 @@ footer {
     gap: 10px;
     flex-direction: column;
     align-items: center;
-    color: #dfdfdf;
+    color: var(--cor-texto);
 }
 #contact-text-box{
-    padding-top: 15px;
-    color: #dfdfdf;
+    margin-top: 15px;
+    color: var(--cor-texto);
     display: flex;
     gap: 30px;
-    padding-right: 27px;
+    margin-right: 27px;
+    align-items: center;
 }
 #end {
     padding-top: 5px;
     padding-bottom: 5px;
     width: 100%;
-    background-color: #121212;
+    background-color: var(--cor-background);
     text-align: center;
-    color: #454545;
+    color: var(--cor-layer1);
 }
