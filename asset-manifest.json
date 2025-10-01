@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/nome-do-repositorio/static/css/main.f6232d74.css",
-    "main.js": "/nome-do-repositorio/static/js/main.96d0fd53.js",
-    "static/js/453.1d07bb3b.chunk.js": "/nome-do-repositorio/static/js/453.1d07bb3b.chunk.js",
-    "static/media/self.png": "/nome-do-repositorio/static/media/self.3623e447b49859c6dee3.png",
-    "static/media/Currículo- Vitor Oliveira Costa Dias.pdf": "/nome-do-repositorio/static/media/Currículo- Vitor Oliveira Costa Dias.1dd2f63a01b5a7821114.pdf",
-    "static/media/instagram.png": "/nome-do-repositorio/static/media/instagram.edb90ecc706a7a25542b.png",
-    "static/media/github.png": "/nome-do-repositorio/static/media/github.f11021803f68852df283.png",
-    "static/media/whatsapp.png": "/nome-do-repositorio/static/media/whatsapp.f90a760bd3bb32b619c2.png",
-    "index.html": "/nome-do-repositorio/index.html",
-    "main.f6232d74.css.map": "/nome-do-repositorio/static/css/main.f6232d74.css.map",
-    "main.96d0fd53.js.map": "/nome-do-repositorio/static/js/main.96d0fd53.js.map",
-    "453.1d07bb3b.chunk.js.map": "/nome-do-repositorio/static/js/453.1d07bb3b.chunk.js.map"
+    "main.css": "/vitorcosta.site/static/css/main.f6232d74.css",
+    "main.js": "/vitorcosta.site/static/js/main.dcc149dd.js",
+    "static/js/453.1d07bb3b.chunk.js": "/vitorcosta.site/static/js/453.1d07bb3b.chunk.js",
+    "static/media/self.png": "/vitorcosta.site/static/media/self.3623e447b49859c6dee3.png",
+    "static/media/Currículo- Vitor Oliveira Costa Dias.pdf": "/vitorcosta.site/static/media/Currículo- Vitor Oliveira Costa Dias.1dd2f63a01b5a7821114.pdf",
+    "static/media/instagram.png": "/vitorcosta.site/static/media/instagram.edb90ecc706a7a25542b.png",
+    "static/media/github.png": "/vitorcosta.site/static/media/github.f11021803f68852df283.png",
+    "static/media/whatsapp.png": "/vitorcosta.site/static/media/whatsapp.f90a760bd3bb32b619c2.png",
+    "index.html": "/vitorcosta.site/index.html",
+    "main.f6232d74.css.map": "/vitorcosta.site/static/css/main.f6232d74.css.map",
+    "main.dcc149dd.js.map": "/vitorcosta.site/static/js/main.dcc149dd.js.map",
+    "453.1d07bb3b.chunk.js.map": "/vitorcosta.site/static/js/453.1d07bb3b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f6232d74.css",
-    "static/js/main.96d0fd53.js"
+    "static/js/main.dcc149dd.js"
   ]
 }
