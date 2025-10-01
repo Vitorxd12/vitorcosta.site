@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.ee9bb2a8.css",
-    "main.js": "/static/js/main.7a8c0dbe.js",
+    "main.css": "/static/css/main.03840d4c.css",
+    "main.js": "/static/js/main.1983497d.js",
     "static/js/453.1d07bb3b.chunk.js": "/static/js/453.1d07bb3b.chunk.js",
     "static/media/self.png": "/static/media/self.3623e447b49859c6dee3.png",
     "static/media/Currículo- Vitor Oliveira Costa Dias.pdf": "/static/media/Currículo- Vitor Oliveira Costa Dias.1dd2f63a01b5a7821114.pdf",
@@ -9,12 +9,12 @@
     "static/media/github.png": "/static/media/github.f11021803f68852df283.png",
     "static/media/whatsapp.png": "/static/media/whatsapp.f90a760bd3bb32b619c2.png",
     "index.html": "/index.html",
-    "main.ee9bb2a8.css.map": "/static/css/main.ee9bb2a8.css.map",
-    "main.7a8c0dbe.js.map": "/static/js/main.7a8c0dbe.js.map",
+    "main.03840d4c.css.map": "/static/css/main.03840d4c.css.map",
+    "main.1983497d.js.map": "/static/js/main.1983497d.js.map",
     "453.1d07bb3b.chunk.js.map": "/static/js/453.1d07bb3b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ee9bb2a8.css",
-    "static/js/main.7a8c0dbe.js"
+    "static/css/main.03840d4c.css",
+    "static/js/main.1983497d.js"
   ]
 }
