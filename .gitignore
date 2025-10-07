@@ -29,3 +29,6 @@ yarn-error.log*
 .idea/vitorcosta.site.iml
 .idea/.name
 .idea/discord.xml
+/deploy.bat
+Dockerfile
+nginx.conf

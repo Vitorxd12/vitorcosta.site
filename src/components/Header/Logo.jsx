@@ -5,9 +5,11 @@ import { Link } from "react-router-dom";
 function Logo() {
     return (
         <Link to={"/"} className="logo" >
-            <h1 id="nome">
+            <p id="nome">
+                <b>
                 <span id="accent">.</span>vitor
-            </h1>
+                </b>
+            </p>
             <CubeScene/>
         </Link>
     );
