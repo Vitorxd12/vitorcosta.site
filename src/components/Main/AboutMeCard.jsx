@@ -8,7 +8,7 @@ function AboutMeCard() {
     const vetorTexto = [
         "Olá! Meu nome é Vitor Costa, sou um entusiasta da tecnologia e estudante de Sistemas de Informação no Instituto Federal de Sergipe. Desde cedo, desenvolvi um grande interesse por programação, automação e inovação tecnológica.",
         "Atualmente, aprimoro minhas habilidades em desenvolvimento de software, sistemas, eletrônica e computação aplicada, sempre buscando aprender e me desafiar com novos projetos. Tenho experiência com Arduino, SAP, desenvolvimento web e pesquisa científica, além de já ter conquistado premiações em feiras de ciência e inovação. " ,
-        "Meu objetivo é utilizar a tecnologia para resolver problemas do mundo real e contribuir para projetos que impactem positivamente a sociedade. "
+        "Meu objetivo é me tornar um desenvolvedor que utiliza a tecnologia para resolver problemas do mundo real e contribuir para projetos que impactem positivamente a sociedade. "
     ];
 
     return (

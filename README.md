@@ -1,49 +1,70 @@
-# vitorcosta.site
+# Portfólio Profissional - vitorcosta.site
 
-Este é o repositório do meu site pessoal, desenvolvido com foco em aprendizado, portfólio e organização pessoal. O projeto foi migrado recentemente para React, trazendo um design renovado e melhorias na experiência do usuário.
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
+[![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white)](https://www.cloudflare.com/)
+[![Site Status](https://img.shields.io/badge/Status-Online-brightgreen?style=for-the-badge)](https://vitorcosta.site)
 
-## Funcionalidades
+## Resumo do Projeto
 
-- **Sistema de horários:** Algumas páginas e funcionalidades, como o sistema de horários, são de uso pessoal e foram desenvolvidas para auxiliar na minha rotina. Embora estejam abertas para visualização, podem não ser úteis para outros usuários.
-- **Calculadora científica:** Feita como um projeto da matéria de Cálculo 1, todas as suas funções funcionam com lógica local, sem uso de bibliotecas externas.  
-  > **Atenção:** Por enquanto, o acesso à calculadora ocorre digitando diretamente `/#/calculadora` na URL do site devido à página de portfólio ainda em construção.
-- **Currículo:** Disponibilizo meu currículo em PDF para download direto pelo site.
-- **SEO otimizado:** O site conta com melhorias de SEO e domínio personalizado para melhor indexação.
-- **Design responsivo:** Pensado para funcionar bem em dispositivos móveis e desktop.
+Este repositório contém o código-fonte do meu site portfólio [vitorcosta.site](https://vitorcosta.site). O projeto se trata implementação de uma aplicação front-end moderna, servida por uma infraestrutura de auto-hospedagem segura e eficiente.
 
-## Portfólio
+O principal objetivo é apresentar competências técnicas em desenvolvimento front-end, práticas de DevOps e administração de sistemas Linux em um ambiente de produção, além de auxiliar no meu apredizado destas tecnologias.
 
-A página de portfólio ainda não está pronta, mas será criada em breve com links para meus futuros projetos. Fique atento às atualizações!
+## Componentes Principais
 
-## Status e planos futuros
+### 1. Infraestrutura de Servidor (Homelab)
+A aplicação é servida a partir de uma infraestrutura local configurada para alta disponibilidade e segurança.
 
-- O site está em constante evolução e recebe atualizações frequentes.
-- Estou trabalhando para, em breve, hospedar este projeto também em um servidor local, permitindo ainda mais aprendizado, flexibilidade e autonomia.
-- Nos próximos meses, pretendo hospedar diferentes sistemas e backends próprios, com o objetivo de ampliar meu portfólio e demonstrar competências em desenvolvimento full stack.
+- **Hardware:** Raspberry Pi.
+- **Containerização:** A aplicação React é encapsulada em um contêiner **Docker** para garantir a portabilidade e consistência do ambiente.
+- **Rede e Segurança:** O acesso externo é gerenciado através do **Cloudflare Tunnel**, que provê uma conexão segura sem a necessidade de expor portas de rede públicas, mitigando ataques comuns.
+- **Documentação:** A documentação técnica detalhando a arquitetura e o processo de configuração está disponível para consulta.
 
-## Como rodar localmente
+> **[Acessar Documentação da Infraestrutura](https://vitorcosta.site/portifolio/servidor)**
 
-Você pode acessar o site pronto diretamente em [vitorcosta.site](https://vitorcosta.site).
+### 2. Calculadora Científica
+Componente integrado ao portfólio que demonstra a implementação de algoritmos matemáticos complexos.
 
-Se preferir rodar localmente:
+- **Implementação:** O motor matemático foi desenvolvido sem o uso de bibliotecas de cálculo externas.
+- **Algoritmos:** Funções trigonométricas são computadas via **Séries de Taylor**, e o cálculo de raízes quadradas utiliza o **método de Newton-Raphson**.
+- **Analisador de Expressão (Parser):** Inclui um analisador sintático para pré-processar e resolver expressões matemáticas, incluindo operações implícitas.
 
-1. Clone este repositório:
-   ```sh
-   git clone https://github.com/Vitorxd12/vitorcosta.site.git
-   ```
-2. Instale as dependências:
-   ```sh
-   npm install
-   ```
-3. Rode o projeto:
-   ```sh
-   npm start
-   ```
+> **[Acessar página da Calculadora](https://vitorcosta.site/portifolio/calculadora)**
+
+## Stack Tecnológica
+
+- **Front-end:** React, JavaScript (ES6+), CSS
+- **Infraestrutura e DevOps:** Docker, Cloudflare (Tunnel, DNS, Redirect Rules), Linux (Raspberry Pi OS)
+- **Ferramentas de Desenvolvimento:** Git, GitHub, npm
+
+## Execução Local
+
+Para executar o projeto em um ambiente de desenvolvimento local, siga os passos abaixo.
+
+1.  Clone o repositório:
+    ```sh
+    git clone [https://github.com/Vitorxd12/vitorcosta.site.git](https://github.com/Vitorxd12/vitorcosta.site.git)
+    ```
+2.  Navegue até o diretório e instale as dependências:
+    ```sh
+    cd vitorcosta.site
+    npm install
+    ```
+3.  Inicie o servidor de desenvolvimento:
+    ```sh
+    npm start
+    ```
+
+## Roadmap de Desenvolvimento
+
+Os planos futuros para este projeto incluem:
+- **Expansão do Servidor:** Adição de novos serviços e aplicações back-end à infraestrutura existente.
+- **Desenvolvimento de Novos Módulos:** Inclusão de novos projetos no portfólio.
 
 ## Contato
 
-[Meu perfil no GitHub](https://github.com/Vitorxd12)
+[GitHub](https://github.com/Vitorxd12) | [LinkedIn](https://www.linkedin.com/in/vitor-oliveira-costa-dias-30523a2b0//)
 
 ---
-- Sugestões e colaborações são bem-vindas!
- - Este projeto é mantido por Vitor Oliveira Costa Dias.
+*Mantenedor: Vitor Oliveira Costa Dias.*

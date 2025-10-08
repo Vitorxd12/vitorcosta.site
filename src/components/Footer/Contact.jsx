@@ -6,7 +6,7 @@ import './footer.css';
 function Contact() {
     return (
         <div id={"footer"}>
-            <h1 id="contact-title">Contato</h1>
+            <h2 id="contact-title">Contato</h2>
             <div id="contact-message">
                 <p>Pronto para ajudar em seus projetos.</p>
             </div>
