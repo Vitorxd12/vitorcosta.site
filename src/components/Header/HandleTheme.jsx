@@ -17,11 +17,9 @@ function HandleTheme() {
     }, [dark]);
 
     return(
-        <div>
             <button className={'navbar-button'} onClick={() => setDark(prev => !prev)}>
                 <img id={'theme-icon'} src={theme} alt="Tema"/>
             </button>
-        </div>
     )
 }
 export default HandleTheme;

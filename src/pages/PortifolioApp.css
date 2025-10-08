@@ -1,0 +1,40 @@
+#body-portifolio-app{
+    height: fit-content;
+}
+.imagem-portifolio-app{
+    border-radius: 20px;
+}
+.box-portifolio-app{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-direction: row;
+    background-color: var(--cor-roxo-escuro);
+    width: fit-content;
+    height: fit-content;
+}
+.conteudo-portifolio-app{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 40px;
+    max-width: 400px;
+    color:  white;
+}
+
+@media (max-width: 760px){
+    .box-portifolio-app{
+        padding-top: 10px;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .conteudo-portifolio-app{
+        padding: 10px;
+        max-width: 350px;
+    }
+}

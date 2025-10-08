@@ -13,8 +13,8 @@ function AboutMeCard() {
 
     return (
         <div id="about-me-card">
-            <h2 className="main-title">
-                Sobre <span id="accent"><u>Mim</u></span>
+            <h2 className="sub-title">
+                Sobre <span id="accent"><u>Mim</u></span>:
             </h2>
             <div id="about-me-text">
                 {renderVetorTexto(vetorTexto)}

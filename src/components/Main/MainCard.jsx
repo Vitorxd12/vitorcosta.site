@@ -1,4 +1,5 @@
 import self from "../../assets/self.png";
+import './main.css'
 
 function MainCard(){
     return (

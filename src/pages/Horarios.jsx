@@ -1,6 +1,6 @@
 import HorariosIFS from "../components/Horarios/HoráriosIFS";
 import HorariosUFS from "../components/Horarios/HorariosUFS";
-import {useEffect} from "react";
+
 
 
 function Horarios({local}){

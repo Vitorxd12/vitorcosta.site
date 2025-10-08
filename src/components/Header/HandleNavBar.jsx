@@ -19,7 +19,7 @@ function HandleNavBar() {
     }, []);
 
     if (!isMobile) {
-        return <NavBarBox/>;
+        return <NavBarBox mobile={false}/>;
     }
 
     return open ? (

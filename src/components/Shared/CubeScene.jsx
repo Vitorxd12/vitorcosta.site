@@ -1,3 +1,4 @@
+import './logo.css'
 function CubeScene({ cor }) {
     let style = {};
     if (cor === 1) {

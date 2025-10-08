@@ -1,12 +1,15 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import styles from './calculadora.module.css';
 import {bPress} from "./calculadora.js";
 
 function CalculadoraMain() {
     const [display, setDisplay] = useState("0");
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return (
-        <div className={styles.scene}>
             <div className={styles.calculadora}>
                 <div className={styles.display}>{display}</div>
                 <div className={styles.botoes}>
@@ -46,7 +49,7 @@ function CalculadoraMain() {
                     <div className={`${styles.botao} ${styles.numero}`} onClick={() => bPress('.', setDisplay)}>.</div>
                 </div>
             </div>
-        </div>
+
     );
 }
 

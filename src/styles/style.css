@@ -1,8 +1,4 @@
-@import url('header.css');
-@import url('main.css');
-@import url('footer.css');
 @import url('responsive.css');
-@import url('logo.css');
 @import url('theme.css');
 
 * {
@@ -21,4 +17,8 @@ body {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+a{
+    text-decoration: none;
+    font-weight: normal;
 }

@@ -38,7 +38,10 @@
         width: 200px;
     }
     .main-title{
-        font-size: x-large;
+        font-size: xx-large;
+    }
+    .about-me-text{
+        padding: 0px;
     }
     #main-image-box{
         width: 250px;

@@ -1,6 +1,7 @@
 import React from "react";
-import CubeScene from "../CubeScene";
+import CubeScene from "../Shared/CubeScene";
 import SocialMediaBox from "./SocialMediaBox";
+import './footer.css';
 
 function Contact() {
     return (

@@ -1,0 +1,145 @@
+.portifolio-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--cor-texto);
+    font-size: 30px;
+    padding: 10px 30px 20px 20px;
+}
+.portifolio-box{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-layer1);
+    border-radius: 20px;
+    max-width: 1000px;
+    margin: 50px;
+    padding: 20px;
+    color: var(--cor-texto);
+}
+.portifolio-button {
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    color: white;
+    font-size: medium;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: var(--cor-roxo-escuro);
+    border: 1px solid  white;
+    transition: opacity 0.3s;
+    cursor: pointer;
+}
+.lista-cards {
+    display: flex;
+    flex-wrap: wrap;        /* permite que os cards quebrem linha se não couberem */
+    justify-content: center;
+    gap: 20px;               /* espaçamento entre os cards */
+    max-width: 1000px;
+}
+
+.portifolio-card {
+    background-color: var(--cor-roxo-escuro);
+    border-radius: 20px;
+    max-width: 320px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* container relativo */
+.overlay-imagem {
+    position: relative;
+    width: 100%;
+}
+
+/* imagem */
+.imagem-card-portifolio {
+    width: 100%;
+    display: block;
+    border-radius: 20px;
+}
+
+/* overlay colorido */
+.overlay-imagem::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--cor-roxo-escuro); /* cor do overlay */
+    opacity: 0; /* começa invisível */
+    transition: opacity 0.4s ease;
+    border-radius: 20px;
+    z-index: 1; /* abaixo do texto */
+}
+
+/* texto centralizado */
+.desc-card-portifolio {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white; /* garante visibilidade */
+    z-index: 2; /* acima do overlay */
+    padding: 20px;
+    pointer-events: none; /* deixa o hover passar para o container */
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    gap: 14px;
+}
+
+/* hover: mostra overlay e texto */
+.portifolio-card:hover .overlay-imagem::before {
+    opacity: 0.9;
+}
+
+.portifolio-card:hover .desc-card-portifolio {
+    opacity: 1;
+}
+
+/* título do card */
+.titulo-card-portifolio {
+    text-align: center;
+    padding: 12px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+/* ============================================================== */
+/* REGRAS PARA DISPOSITIVOS SEM HOVER (CELULARES, TABLETS, ETC.)  */
+/* ============================================================== */
+@media (hover: none) and (pointer: coarse) {
+
+    /* 1. Remove o efeito visual de hover no card */
+    .portifolio-card {
+        cursor: default;
+        width: max-content;
+
+    }
+
+    /* 2. Oculta o overlay colorido */
+    .overlay-imagem::before {
+        display: none;
+    }
+
+    /* 3. Ajusta a descrição para ficar sempre visível, abaixo da imagem */
+    .desc-card-portifolio {
+        position: static;
+        opacity: 1;
+        pointer-events: auto;
+        text-align: start;
+    }
+
+    /* 4. Garante que o toque rápido (que simula hover) não tenha efeito */
+    .portifolio-card:hover .desc-card-portifolio,
+    .portifolio-card:hover .overlay-imagem::before {
+        opacity: 1;
+    }
+}
+

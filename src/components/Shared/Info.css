@@ -1,0 +1,14 @@
+.info-icon{
+    background: var(--cor-background);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor-texto);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+.info-icon:hover {
+    cursor: pointer;
+}

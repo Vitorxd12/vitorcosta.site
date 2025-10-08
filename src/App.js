@@ -1,7 +1,7 @@
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Horarios from "./pages/Horarios";
 import Index from "./pages";
-import Calculadora from "./pages/Calculadora";
+import Portifolio from "./pages/Portifolio";
 
 function App() {
     return (
@@ -10,7 +10,8 @@ function App() {
                 <Route path="/" element={<Index />} />
                 <Route path="/horariosIFS" element={<Horarios local={'ifs'}/>} />
                 <Route path="/horariosUFS" element={<Horarios local={'ufs'}/>} />
-                <Route path="/calculadora" element={<Calculadora />} />
+                <Route path="/portifolio/calculadora" element={<Portifolio pagina={'calculadora'}/>} />
+                <Route path="/portifolio/servidor" element={<Portifolio pagina={'servidor'}/>} />
             </Routes>
         </Router>
     );
